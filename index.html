@@ -161,17 +161,17 @@
     
 
         .btn {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 10px;
-    justify-content: center;
-    padding: 0.75rem 1.5rem; /* Reduced padding */
-    border-radius: var(--radius);
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-    white-space: nowrap;
-    font-size: 0.9rem; /* Slightly smaller font */
+        display: inline-flex;
+        align-items: center;
+        margin-top: 10px;
+        justify-content: center;
+        padding: 0.75rem 1.5rem; /* Reduced padding */
+        border-radius: var(--radius);
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition);
+        white-space: nowrap;
+        font-size: 0.9rem; /* Slightly smaller font */
 }
 
         .btn-primary {
@@ -691,6 +691,288 @@
     font-size: 1.75rem;
     font-weight: 600;
 }
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+
+.mission-list {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    list-style: none;
+}
+
+.mission-list li {
+    margin: 8px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #111;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Mission Section */
+.mission-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+.mission-text {
+    flex: 1 1 50%;
+}
+.mission-list {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+}
+.mission-list li {
+    margin: 0.5rem 0;
+    list-style: none;
+    font-weight: 500;
+}
+.mission-images {
+    flex: 1 1 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.mission-images img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Why Zekitales Section */
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .why-card {
+            background: linear-gradient(145deg, #1a1a1a, #222);
+            color: #eee;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 188, 212, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #d4d000, #dfb058);
+            transition: width 0.4s ease;
+        }
+        
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 188, 212, 0.2);
+        }
+        
+        .why-card:hover::before {
+            width: 8px;
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #e99905;
+            background: rgba(0, 188, 212, 0.1);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .why-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: #00bcd4;
+        }
+        
+        .why-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-top: auto;
+        }
+        
+        /* Animation for cards */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .why-card {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+        
+        .why-card:nth-child(1) { animation-delay: 0.1s; }
+        .why-card:nth-child(2) { animation-delay: 0.2s; }
+        .why-card:nth-child(3) { animation-delay: 0.3s; }
+        .why-card:nth-child(4) { animation-delay: 0.4s; }
+        .why-card:nth-child(5) { animation-delay: 0.5s; }
+        .why-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cards-grid {
+                gap: 1.5rem;
+            }
+            
+            .why-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+
+/* Values Slider */
+.values-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.value-card {
+  background-color: var(--light);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.value-icon {
+  font-size: 3rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.value-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+.value-text {
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--secondary);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:hover {
+  background: var(--primary);
+}
+
+.slider-btn.prev {
+  left: -60px;
+}
+
+.slider-btn.next {
+  right: -60px;
+}
+
+
 
 .about-content {
     display: grid;
@@ -1922,60 +2204,169 @@ textarea.form-control {
     </main>
 
     <!-- About Page -->
-    <main id="about" class="page-content">
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">About <span>Us</span></h1>
-                    <p class="hero-text">Learn about our story, values, and the team behind Zekitales.</p>
-                </div>
+   <main id="about" class="page-content">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">About <span>Us</span></h1>
+                <p class="hero-text">Learn about our story, mission, and why clients choose Zekitales.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-image">
-                        <img src="https://i.postimg.cc/L54g1kXF/a-wide-cinematic-photograph-of-a-modern-F2-LADo-OLTo-od1-Xx-Q1-QIHw-h1-Yj-VTxd-TDi7-S0-G-r-TGg.jpg" alt="Our team">
-                    </div>
-                    
-                    <div class="about-text">
-                        <h2 class="section-title">Our Story</h2>
-                        <p>Founded in 2020, Zekitales began as a small team of passionate developers and designers with a shared vision: to create exceptional digital experiences that make a real difference.</p>
-                        <p>Today, we're a global agency serving clients across multiple industries, but we've stayed true to our core values of innovation, quality, and client satisfaction.</p>
-                        <p>Our remote-first approach allows us to work with the best talent worldwide while keeping our operations lean and efficient.</p>
-                        
-                        <h2 class="section-title" style="margin-top: 2rem;">Our Values</h2>
-                        <div class="features-grid" style="margin-top: 1rem;">
-                            <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i class="fas fa-lightbulb"></i>
-                                </div>
-                                <h3 class="feature-title">Innovation</h3>
-                                <p class="feature-text">We constantly explore new technologies and approaches to deliver cutting-edge solutions.</p>
-                            </div>
-                            
-                            <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i class="fas fa-award"></i>
-                                </div>
-                                <h3 class="feature-title">Quality</h3>
-                                <p class="feature-text">We take pride in delivering work that meets the highest standards of excellence.</p>
-                            </div>
-                            
-                            <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h3 class="feature-title">Collaboration</h3>
-                                <p class="feature-text">We work closely with our clients to understand their needs and deliver tailored solutions.</p>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Mission Section -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/L54g1kXF/a-wide-cinematic-photograph-of-a-modern-F2-LADo-OLTo-od1-Xx-Q1-QIHw-h1-Yj-VTxd-TDi7-S0-G-r-TGg.jpg" alt="Our mission">
+                </div>
+                
+                <div class="about-text">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p>
+                        Our mission is to empower businesses and individuals through innovative and reliable digital solutions. 
+                        We aim to create software and services that are not only user-friendly but also scalable to meet future needs. 
+                        By combining creativity, technology, and a commitment to quality, we help our clients achieve their goals 
+                        and stay ahead in a fast-changing digital world. Customer satisfaction and long-term partnerships are at 
+                        the heart of everything we do.
+                    </p>
+                    <ul class="mission-list">
+                        <li>✔️ We build friendly and long-term relationships with our clients.</li>
+                        <li>✔️ We make sure our clients are satisfied with our work.</li>
+                        <li>✔️ We provide support even after the project is completed.</li>
+                        <li>✔️ We listen to our clients’ needs carefully and deliver accordingly.</li>
+                        <li>✔️ We work with honesty so clients trust us and come back again.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        
+        </div>
+    </section>
+
+    <!-- Why Zekitales Section -->
+    <section class="section why-us">
+        <div class="container">
+            <h2 class="section-title">Why Zekitales?</h2>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Trusted Partner</h3>
+                    <p>We believe in building strong and long-term relationships with our clients. By working closely and maintaining open communication, we ensure trust, transparency, and a partnership that goes beyond just one project.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Client Satisfaction</h3>
+                    <p>Your success is our top priority. We focus on delivering quality solutions that meet your needs and exceed expectations, ensuring you are fully satisfied and confident to work with us again in the future.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We use the latest technologies and creative ideas to design smart solutions that solve real problems and help businesses grow.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Our skilled engineers and developers bring experience in web, mobile, AI, and cloud solutions. Working together, our team delivers reliable and effective results tailored to your needs.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Commitment</h3>
+                    <p>We are dedicated to your success, providing tailored solutions with measurable results. We deliver projects on time, maintain transparency, and build long-term trust with every client.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>We provide continuous support to ensure your systems run smoothly without interruption. Our team is always available to resolve issues, apply updates, and keep your business operations secure and reliable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <div class="container">
+    <h2 class="section-title">Our Values</h2>
+    <div class="values-slider">
+      
+      <!-- Prev Button -->
+      <button class="slider-btn prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Slider Container -->
+      <div class="slider-wrapper">
+        <div class="slider-container">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="value-title">Integrity</h3>
+              <p class="value-text">We work with honesty, transparency, and trust in everything we do.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 class="value-title">Innovation</h3>
+              <p class="value-text">We embrace new ideas and technologies to create smart solutions.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3 class="value-title">Excellence</h3>
+              <p class="value-text">We are committed to delivering high-quality results that make a difference.</p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3 class="value-title">Collaboration</h3>
+              <p class="value-text">We believe in teamwork and open communication to achieve shared goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Button -->
+      <button class="slider-btn next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+  
+
         <section class="section" style="background-color: var(--gray-light);">
             <div class="container">
                 <h2 class="section-title">Our Team</h2>
@@ -2152,34 +2543,36 @@ textarea.form-control {
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const closeMobileMenu = document.getElementById('closeMobileMenu');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const overlay = document.getElementById('overlay');
-        
+   <script>
+    // ================== Mobile Menu Toggle ==================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    
+    if (mobileMenuBtn && closeMobileMenu && mobileMenu && overlay) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.add('active');
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
-        
+
         closeMobileMenu.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
         });
-        
+
         overlay.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
         });
-        
-        // Header Scroll Effect
-        const header = document.getElementById('header');
-        
+    }
+
+    // ================== Header Scroll Effect ==================
+    const header = document.getElementById('header');
+    if (header) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
@@ -2187,94 +2580,114 @@ textarea.form-control {
                 header.classList.remove('scrolled');
             }
         });
-        
-        // Page Navigation
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page-content').forEach(page => {
-                page.classList.remove('active');
+    }
+   // Additional interactive effect
+        document.querySelectorAll('.why-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.querySelector('.card-icon').style.transform = 'scale(1.1) rotate(5deg)';
             });
             
-            // Show the requested page
-            const targetPage = document.getElementById(pageId);
-            if (targetPage) targetPage.classList.add('active');
-            
-            // Update active link styling
-            document.querySelectorAll('[data-page]').forEach(link => {
-                if (link.getAttribute('data-page') === pageId) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.card-icon').style.transform = 'scale(1) rotate(0)';
             });
-           
-    
+        });
+    // ================== Page Navigation ==================
+    function showPage(pageId) {
+        document.querySelectorAll('.page-content').forEach(page => {
+            page.classList.remove('active');
+        });
 
-            // Close mobile menu if open
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            // Update browser history
-            history.pushState({ page: pageId }, '', `#${pageId}`);
-        }
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) targetPage.classList.add('active');
 
-        // Handle navigation clicks
         document.querySelectorAll('[data-page]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const pageId = this.getAttribute('data-page');
-                showPage(pageId);
-            });
-        });
-
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', function(event) {
-            const hash = window.location.hash.substring(1);
-            const validPages = ['home', 'services', 'technologies', 'portfolio', 'about', 'contact'];
-            
-            if (hash && validPages.includes(hash)) {
-                showPage(hash);
+            if (link.getAttribute('data-page') === pageId) {
+                link.classList.add('active');
             } else {
-                showPage('home');
+                link.classList.remove('active');
             }
         });
 
-        // Initialize page based on URL hash
-        document.addEventListener('DOMContentLoaded', function() {
-            const hash = window.location.hash.substring(1);
-            const validPages = ['home', 'services', 'technologies', 'about', 'contact'];
-            
-            if (hash && validPages.includes(hash)) {
-                showPage(hash);
-            } else {
-                showPage('home');
-            }
-        });
+        mobileMenu?.classList.remove('active');
+        overlay?.classList.remove('active');
+        document.body.style.overflow = '';
 
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
-                
-                // Here you would typically send the form data to a server
-                // For this demo, we'll just show an alert
-                alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
-                
-                // Reset the form
-                contactForm.reset();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.pushState({ page: pageId }, '', `#${pageId}`);
+    }
+
+    document.querySelectorAll('[data-page]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const pageId = this.getAttribute('data-page');
+            showPage(pageId);
+        });
+    });
+
+    window.addEventListener('popstate', function() {
+        const hash = window.location.hash.substring(1);
+        const validPages = ['home', 'services', 'technologies', 'portfolio', 'about', 'contact'];
+        if (hash && validPages.includes(hash)) {
+            showPage(hash);
+        } else {
+            showPage('home');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const hash = window.location.hash.substring(1);
+        const validPages = ['home', 'services', 'technologies', 'about', 'contact'];
+        if (hash && validPages.includes(hash)) {
+            showPage(hash);
+        } else {
+            showPage('home');
+        }
+    });
+
+    // ================== Contact Form ==================
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
+            contactForm.reset();
+        });
+    }
+
+    // ================== Slider Script ==================
+    const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
             });
         }
-    </script>
+
+        if (slides.length > 0) {
+            showSlide(currentIndex);
+
+            nextBtn?.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            });
+
+            prevBtn?.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
+            });
+
+            // Auto-slide every 5 sec
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }, 5000);
+        }
+    
+</script>
+
 </body>
 </html>
